@@ -9,7 +9,7 @@ def home():
         # Handle POST Request here
 
             
-            payLoad= {"uid": request.form.get('uid'),
+            payLoad= {          "uid": request.form.get('uid'),
                     "uidType": request.form.get('uidType'),
                     "title":request.form.get('title') ,
                     "firstName": request.form.get('firstName'),
@@ -42,13 +42,16 @@ def home():
             
 
 
-            print (payLoad)
+            print (request.form.get('uid'))
+
+
+            
+            
             
     return render_template('form.html')
     
 
     return render_template('form.html')       
-
 if __name__ == '__main__':
     #DEBUG is SET to TRUE. CHANGE FOR PROD
     app.run(port=5000,debug=True)
