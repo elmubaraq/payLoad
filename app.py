@@ -46,12 +46,12 @@ def home():
 
 
             
-            
+            return render_template('form.html',payLoad=payLoad)
             
     return render_template('form.html')
     
 
-    return render_template('form.html')       
+           
 if __name__ == '__main__':
     #DEBUG is SET to TRUE. CHANGE FOR PROD
     app.run(port=5000,debug=True)
